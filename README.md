@@ -41,19 +41,19 @@ Your task is to containerize this existing application using Docker. You need to
 - To build the docker image run the command:
 
 ```bash
-
+docker build -t modern-technologies-assignment4 .
 ```
 
 - To run your docker container in port 3000 run the command:
 
 ```bash
-
+docker run -d -p 3000:3000 --name assignment4-container modern-technologies-assignment4
 ```
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
 
-
+Docker containers package the application and its dependencies while sharing the host operating system, while virtual machines run a full operating system for each VM. A development team might choose Docker because containers use fewer resources, start faster, and make it easier to run the application consistently on different machines.
 
 ## Application Requirements for Docker
 
@@ -92,3 +92,11 @@ docker-assignment/
 ```
 
 Good luck with your Docker containerization!
+
+## Screenshots
+
+### Application Running at localhost:3000
+![Application running at localhost](screenshots/localhost-home.png)
+
+### API Status Endpoint
+![API status endpoint](screenshots/api-status.png)
